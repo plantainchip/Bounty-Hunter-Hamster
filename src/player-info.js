@@ -1,13 +1,14 @@
 
-export function hamsterPlayer(){
+export function hamsterPlayer(xPos,yPos){
     let SPEED = 75;
 
     const player = add([
         sprite("player"),
-        pos(100, 96),
+        pos(xPos,yPos),
         body(),
         // area({ shape: new Polygon([vec2(0), vec2(10), vec2(-10, 10)]) }),
-        area({shape: new Circle(vec2(0),1)},anchor("center")),
+        area({shape: new Circle(vec2(0),3)},anchor("center")),
+        // area(),
         anchor("center"),
         "hammy"
     ]);
