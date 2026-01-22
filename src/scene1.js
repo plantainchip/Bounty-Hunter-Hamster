@@ -5,7 +5,7 @@ export default function(STATE){
     // make your level 2
     debug.log("scene 1 - the ham radio");
     add([ sprite("radio-field"), ]);
-    debug.inspect = true
+    // debug.inspect = true
     const wall = add([
         pos(0, 0),
         polygon([
@@ -32,18 +32,18 @@ export default function(STATE){
         //     ])
         // }),
         color(125,25,255),
-        opacity(0.7),
+        opacity(0),
         "wall"
     ])
     // debug.log(mousePos.pos.x.toFixed(0) + " " + mousePos.pos.y.toFixed(0));
     
-    const player = hamsterPlayer(STATE.ham_x, STATE.ham_y)
+    const player = hamsterPlayer(STATE.protag.location.x, STATE.protag.location.y)
 
     onUpdate(() => {
         if(player.pos.x > 240){
             console.log("change scene")
-            STATE.ham_x = 20;
-            STATE.ham_y = player.pos.y
+            STATE.protag.location.x = 20;
+            STATE.protag.location.y = player.pos.y
             go("scene2", STATE);
         }
 

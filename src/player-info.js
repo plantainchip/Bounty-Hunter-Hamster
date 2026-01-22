@@ -30,7 +30,6 @@ export function hamsterPlayer(xPos,yPos){
     });
 
     return player
-
 }
 
 export const GRAVITY = 9.8;

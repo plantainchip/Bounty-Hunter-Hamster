@@ -35,18 +35,22 @@ scene("scene2",scene2) // hi
 // and import player controls instead of copy pasting them
 
 const STATE ={
-    ham_x: 100,
-    ham_y: 96,
+    protag:{
+        location:{
+            x: 100,
+            y: 96,
+        }
+    }
 }
 
 scene("start",(STATE)=>{
     onKeyPress((key) => {
         go("scene1", STATE);
     })
-    
 })
 
-onLoad(() => go("start",STATE))
+/* CHANGE SCENES HERE FOR DEBUGGING !!!!!!!!!!!*/
+onLoad(() => go("scene1",STATE))
 // go("start");
 
 
