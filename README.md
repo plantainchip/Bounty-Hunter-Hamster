@@ -12,3 +12,5 @@ I adore hamsters and I adore Hamtaro so I really wanted to try making a wacky RP
 The reason why I decided on a top down rpg style game was because I wanted to learn how to make a game in that style. I've only been attempting 2d side scrolling games so this is a challenge to myself. 
 
 ![Hamster Gif](./public/sprites/hamster-teaser.gif)
+
+Jan 23 - So originally I wanted to make 100 backgrounds but I cut it down to 25 to try things out. Let's see where I go with this.
