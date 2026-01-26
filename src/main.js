@@ -48,6 +48,7 @@ loadSprite("player", "./sprites/concept-player-idle.png");
 loadSprite("home", "./sprites/concept-field00.png");
 loadSprite("radio-field", "./sprites/concept-field01.png");
 loadSprite("ants-field", "./sprites/concept-field02.png");
+loadSprite("ant","./sprites/concept-enemy00.png")
 
 loadSprite("grid0","./sprites/worldmap25slices/output_0.png");
 loadSprite("grid1","./sprites/worldmap25slices/output_1.png");
@@ -126,7 +127,7 @@ scene("start",(STATE)=>{
 })
 
 /* CHANGE SCENES HERE FOR DEBUGGING !!!!!!!!!!!*/
-onLoad(() => go("scene19",STATE))
+onLoad(() => go("scene6",STATE))
 // go("start");
 
 

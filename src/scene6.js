@@ -1,9 +1,14 @@
 import "kaplay/global";
 import { hamsterPlayer } from "./player-info";
+import { antENEMY } from "./ant-info";
+
 
 export default function(STATE){
     add([ sprite("grid6"), ]);
-    const player = hamsterPlayer(STATE.protag.location.x, STATE.protag.location.y)
+    const player = hamsterPlayer(STATE.protag.location.x, STATE.protag.location.y);
+    const ant1 = antENEMY(20,40);
+    const ant2 = antENEMY(80,80);
+
 
     onUpdate(() => {
 
@@ -34,6 +39,7 @@ export default function(STATE){
             STATE.protag.location.y = 20
             go("scene11",STATE)
         }
+
 
     })
 
