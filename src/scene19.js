@@ -5,38 +5,24 @@ export default function(STATE){
     add([ sprite("grid19"), ]);
     debug.inspect = true
     // debug.log(mousePos.pos.x.toFixed(0) + " " + mousePos.pos.y.toFixed(0));
-    // const wall = add([
-    //     pos(0, 0),
-    //     polygon([
-    //         vec2(0,0), 
-    //         vec2(width(),0), 
-    //         vec2(width(),40), 
-    //         vec2(165,40), 
-    //         vec2(163,52),
-    //         vec2(60,65), 
-    //         vec2(35,58), 
-    //         vec2(0,60)
-    //     ]),
-    //     body({isStatic:true}),
-    //     area(),
-    //     // area({ shape: new Polygon([
-    //     //     vec2(0,0), 
-    //     //     vec2(width(),0), 
-    //     //     vec2(width(),40), 
-    //     //     vec2(165,40), 
-    //     //     vec2(163,52),
-    //     //     vec2(60,65), 
-    //     //     vec2(35,58), 
-    //     //     vec2(0,60)
-    //     //     ])
-    //     // }),
-    //     color(125,25,255),
-    //     opacity(0),
-    //     "wall"
-    // ])
+    add([
+        pos(0, 0),
+        rect(240,40),
+        body({isStatic:true}),
+        area(),
+        color(125,25,255),
+        opacity(0),
+    ])
+    add([
+        pos(200, 41),
+        rect(40,120),
+        body({isStatic:true}),
+        area(),
+        color(125,25,255),
+        opacity(0),
+    ])
 
 
-    
     const player = hamsterPlayer(STATE.protag.location.x, STATE.protag.location.y)
 
     onUpdate(() => {
@@ -56,7 +42,8 @@ export default function(STATE){
         }
 
     })
-  
+
+
 
     player.onCollide("wall", (obj, col) => {
         console.log(col)

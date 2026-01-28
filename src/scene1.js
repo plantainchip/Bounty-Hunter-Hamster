@@ -4,7 +4,14 @@ import { hamsterPlayer } from "./player-info";
 export default function(STATE){
     add([ sprite("grid1"), ]);
     const player = hamsterPlayer(STATE.protag.location.x, STATE.protag.location.y)
-
+    add([
+        pos(0, 0),
+        rect(240,10),
+        body({isStatic:true}),
+        area(),
+        color(125,25,255),
+        opacity(0),
+    ])
     onUpdate(() => {
 
         //go right

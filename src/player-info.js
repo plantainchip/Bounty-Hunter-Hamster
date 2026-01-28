@@ -29,8 +29,6 @@ export function hamsterPlayer(xPos,yPos){
         player.move(0, -SPEED);
     });
 
-
-
     return player
 }
 

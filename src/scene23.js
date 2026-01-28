@@ -5,6 +5,15 @@ export default function(STATE){
     add([ sprite("grid23"), ]);
     const player = hamsterPlayer(STATE.protag.location.x, STATE.protag.location.y)
 
+    add([
+        pos(0, 110),
+        rect(240,50),
+        body({isStatic:true}),
+        area(),
+        color(125,25,255),
+        opacity(0),
+    ])
+
     onUpdate(() => {
         // go left
         if(player.pos.x < 0){
